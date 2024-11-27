@@ -1,0 +1,121 @@
+{
+	// vim settings
+	"vim.easymotion": true,
+	"vim.incsearch": true,
+	"vim.useSystemClipboard": true,
+	"vim.useCtrlKeys": true,
+	"vim.hlsearch": true,
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		},
+		//  候補のフォーカスを下へ移動
+		{
+			"key": "ctrl+n",
+			"command": "slectNextSuggestion",
+			"when": "editortextforcus && suggestwidgetmultiplesuggestions && sugestwidgetvisible"
+		},
+		//  候補のフォーカスを上へ移動
+		{
+			"key": "ctrl+p",
+			"command": "slectPrevSuggestion",
+			"when": "editorTextForcus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+		}
+	],
+	"vim.insertModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<C-h>"
+			],
+			"commands": [
+				"cursorLeft"
+			]
+		},
+		{
+			"before": [
+				"<C-l>"
+			],
+			"commands": [
+				"cursorRight"
+			]
+		},
+		{
+			"before": [
+				"<C-j>"
+			],
+			"commands": [
+				"cursorDown"
+			]
+		},
+		{
+			"before": [
+				"<C-k>"
+			],
+			"commands": [
+				"cursorUp"
+			]
+		}
+	],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [
+				"<leader>",
+				"d"
+			],
+			"after": [
+				"d",
+				"d"
+			]
+		},
+		{
+			"before": [
+				"<C-n>"
+			],
+			"commands": [
+				":nohl"
+			]
+		},
+		{
+			"before": [
+				"K"
+			],
+			"commands": [
+				"lineBreakInsert"
+			],
+			"silent": true
+		},
+		{
+			"before": [
+				"<C-h>"
+			],
+			"commands": [
+				"workbench.action.focusLeftGroup"
+			],
+			"when": "vim.active || vim.mode == 'Normal'"
+		},
+		{
+			"before": [
+				"<C-l>"
+			],
+			"commands": [
+				"workbench.action.focusRightGroup"
+			],
+			"when": "vim.active || vim.mode == 'Normal'"
+		}
+	],
+	"vim.leader": "<space>",
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false
+	},
+	// To improve performance
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	}
+}
