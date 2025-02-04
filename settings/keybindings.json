@@ -1,0 +1,58 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+t",
+        "command": "terminal.focus"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "cmd+k e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "cmd+r",
+        "command": "python.execInTerminal-icon"
+    },
+
+    {
+        "key": "ctrl+n",
+        "command": "slectNextSuggestion",
+        "when": "editortextforcus && suggestwidgetmultiplesuggestions && sugestwidgetvisible"
+    },
+    //  候補のフォーカスを上へ移動
+    {
+        "key": "ctrl+p",
+        "command": "slectPrevSuggestion",
+        "when": "editorTextForcus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    // サイドバーへの移動 (ctrl+hをhにしてctrlを話すだけで切り替わる)
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.focusSideBar",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorFocus"
+    },
+
+    {
+        "key": "ctrl+s",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+    },
+
+    {
+        "key": "enter",
+        "command": "workbench.action.firstEditorInGroup",
+        "when": "explorerViewletFocus && foldersViewVisible && !inputFocus"
+    },
+
+ 
+]
